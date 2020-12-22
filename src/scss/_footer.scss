@@ -1,0 +1,39 @@
+#footer {
+    background-color: $color-black; 
+    height: 100vh;
+}
+.footer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $color-white;
+
+    > div {
+        p {
+            font-family: serif; 
+            font-family: $font-basic; 
+            font-size: 20px; 
+            font-weight: 200; 
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-family: $font-main; 
+            font-size: 144px; 
+            line-height: 1; 
+            text-transform: uppercase;
+            margin-bottom: 5rem;
+        }
+        a {
+            color: $color-white;
+            border: 1px solid $color-white;
+            border-radius: 50px;
+            padding: 18px 53px 18px 53px;
+            font-size: 16px;
+            font-weight: 300;
+            font-family: $font-basic;
+            text-transform: uppercase;
+        }
+    }
+}

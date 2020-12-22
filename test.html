@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function a(){
+        //     document.write("a")
+        // }
+        // function b(){
+        //     document.write("b")
+        // }
+        // function a(){
+        //     setTimeout(function(){
+        //         document.write("a");
+        //         document.write("b")
+        //     })
+        // }
+        // function a(){
+        //     document.write("a")
+        // }
+        // function b(){
+        //     document.write("b")
+        // }s
+        // a();
+        // b();
+
+        //콜백함수
+        // function a(){
+        //     setTimeout(function(){
+        //         console.log('A');
+        // },1000);
+        // function b(){
+        //     console.log('b');
+        // }
+        // a(function(){
+        //     b();
+        // })
+
+        //콜백 지옥
+        function a(callback){
+            setTimeout(function(){
+                console.log('a');
+                callback();
+            },1000);
+        }
+        function b(callback){
+            setTimeout(function(){
+                console.log('b');
+                callback();
+            },1000);
+        }
+        function c(callback){
+            setTimeout(function(){
+                console.log('c');
+                callback();
+            },1000);
+        }
+        function d(callback){
+            setTimeout(function(){
+                console.log('d');
+                callback();
+            },1000);
+        }
+
+        // promise
+        function a(){
+            if(isError){
+                reject()
+            }
+            setTimeout(() => {
+                console.log("A");
+                resolve();
+            },1000);
+        });
+        a()
+        function b(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    console.log("b");
+                    resolve();
+                },1000)
+            })
+        }
+        b();
+        function c(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    console.log("c");
+                    resolve();
+                },1000)
+            })
+        }
+        c();
+        a().then(() => {
+            return a()
+        }).b().then(() => {
+            return b()
+        }).c().then(() => {
+            return c()
+        })
+        a().then(()=>b())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

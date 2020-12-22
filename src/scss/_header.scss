@@ -1,0 +1,83 @@
+#header {
+    position: static;
+    left: 0; top: 0;
+    width: 100%;
+    height: 82px;
+    background: $color-black;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #2E2E30;
+    .site {
+        flex: 1 1 30%;
+        a {
+            position: relative;
+            text-transform: capitalize;
+            display: block;
+            padding-left: 40px;
+            border-right: 1px solid #2E2E30;
+            width: 175px;
+            height: 82px;
+            padding: 32px 27px 0px 65px;
+            text-align: center;
+            box-sizing: border-box;
+            &::before {
+                @include cont;
+                left: 48px; 
+                top: 36px;
+                width: 30px;
+                height: 1px;
+                background: $color-white;
+            } 
+            &::after {
+                @include cont;
+                left: 48px; 
+                top: 46px;
+                width: 30px;
+                height: 1px;
+                background: $color-white;
+            }
+        }
+    }
+    .logo {
+        flex: 1 1 30%;
+        text-align: center;
+        font-size: 2.2rem;
+        margin-top: 1.2rem;
+        font-family: $font-main;
+        font-weight: bold;
+    }
+    .nav {
+        flex: 1 1 30%;
+        text-align: right;
+        ul {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                padding: 10px;
+            }
+        }
+    }
+    a {
+        color: $color-white;
+    }
+}
+#header.white {
+    background: $color-white;
+    border-bottom: 1px solid #DAD8D1;
+    .site a {
+        border-right: 1px solid #DAD8D1;
+    }
+    a{
+        color: $color-black;
+        &::before {
+            background-color: $color-black;
+        }
+        &::after {
+            background-color: $color-black;
+        }
+    }
+}

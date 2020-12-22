@@ -1,10 +1,12 @@
 @charset "UTF-8";
-//Base
+
+// BASE
 @import "fonts";
 @import "variables";
 @import "base";
 @import "mixins";
-//loading
-@import "loading";
-//layout
+
+// layout
+@import "header";
+@import "footer";
 @import "layout";
